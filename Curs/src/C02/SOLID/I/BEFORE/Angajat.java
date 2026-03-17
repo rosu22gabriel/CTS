@@ -1,4 +1,4 @@
-package C02.SOLID.I;
+package C02.SOLID.I.BEFORE;
 
 public interface Angajat {
     public void lucreaza();

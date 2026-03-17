@@ -1,4 +1,4 @@
-package C02.SOLID.I;
+package C02.SOLID.I.BEFORE;
 
 public class Lucrator implements Angajat{
     public String nume;

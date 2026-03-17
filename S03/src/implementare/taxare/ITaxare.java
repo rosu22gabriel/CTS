@@ -1,2 +1,5 @@
-package implementare.taxare;public class ITaxare {
+package implementare.taxare;
+
+public interface ITaxare {
+    double calculNetDinBrut(double salariuBrut);
 }

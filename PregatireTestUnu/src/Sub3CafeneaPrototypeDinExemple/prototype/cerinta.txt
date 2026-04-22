@@ -1,0 +1,31 @@
+Se dezvoltă o aplicație so�ware des�nată unei cafenele.
+4p. Se dorește dezvoltarea unei aplicații pentru o cafenea digitală care să permită ges�onarea
+comenzilor online. Sistemul trebuie să ofere o evidență clară a comenzilor plasate. Sistemul
+trebuie să permită crearea diferitelor �puri de băuturi: Cafea, Ceai, Ciocolată caldă. Acestea vor
+implementa interfata Bautura.
+Fiecare �p de băutură va avea:
+• un nume
+• un volum (în mililitri)
+• un preț
+• o metodă de preparare specific băuturii în care sunt afisați pași parcursi pentru
+preparare
+Crearea băuturilor trebuie separată de logica principală a aplicației. --> Factory Method
+(Pentru a separa crearea bauturilor de logica principala) si Prototype (pentru clonarea bauturilor
+presetate/sabloane).
+
+1p. Să se testeze soluția prin crearea a cel puțin patru obiecte de �pul Bautura si u�lizarea
+acestora.
+3p.Sistemul va avea o componentă inteligentă de păstrare a �purilor de băuturi personalizate
+pentru clien�i fideli. Această componentă permite salvarea unor comenzi de bauturi ca
+șabloane (BauturaPresetata) și refolosirea lor prin copiere, pentru clienții fideli sau comenzi
+frecvente, as�el încât să nu se mai piardă �mpul cu crearea băuturii personalizate cum o
+dorește clientul. De exemplu un client bea in fiecare dimineata un Late de 350 de mililitri cu
+caramel.
+1p. Simulați plasarea a cel pu�n patru comenzi prin care sa arata� ca doua dintre ele au fost
+copiate.
+public interface Bautura {
+ void preparare();
+ String getDetalii();
+ double getPret();
+ void adaugaTopping();
+}

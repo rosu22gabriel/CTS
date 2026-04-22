@@ -1,0 +1,31 @@
+Se dezvoltă o aplicație so�ware des�nată unei cafenele.
+4p. Se dorește dezvoltarea unei aplicații pentru o cafenea care să permită ges�onarea
+comenzilor online. Sistemul trebuie să ofere o evidență clară a comenzilor plasate. Sistemul
+trebuie să permită crearea diferitelor �puri de băuturi: Cafea, Ceai, Ciocolată caldă. Acestea vor
+implementa interfata Bautura. Fiecare �p de băutură va avea:
+• un nume
+• un volum (în mililitri)
+• un preț
+• o metodă de preparare specific băuturii în care sunt afisați pași parcursi pentru
+preparare
+Crearea băuturilor trebuie separată de logica principală a aplicației. *** FACTORY
+1p. Să se testeze soluția prin crearea a cel puțin patru obiecte de �pul Bautura si u�lizarea
+acestora.
+3p.Cafeneaua are o singura casa de marcat. As�el sistemul va avea o componentă centrală care
+ges�onează comanda clien�lor. Această componentă de ges�onare trebuie să fie unic accesibilă
+în toată aplicația și să nu permită instanțierea mul�plă. In cadrul componentei nou adaugate se
+permite adăugarea de băuturi pentru o comanda si oferă posibilitatea de a afișa toate bauturile
+din ul�ma comanda precum si posibilitatea de a calcula prețul total al comenzii. Trebuie folosita
+interfata ComandaManager, iar pentru bauturi interfata Bautura.
+1p. Simulați plasarea a cel pu�n două comenzi prin care sa arata� ca nu pot fi realizate doua
+comenzi concomitent. Insa in cadrul unei comenzi pot fi adaugate bauturi similare.
+public interface Bautura {
+ void preparare();
+ String getDetalii();
+ double getPret();
+}
+public interface ComandaManager {
+ void adaugaBautura(Bautura b);
+ void afiseazaComanda();
+ double calculeazaPretTotal();
+ void resetComanda(); }
